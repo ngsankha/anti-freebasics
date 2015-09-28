@@ -12,8 +12,7 @@ function openFileDialog() {
 function loadPicture(evt) {
   var file = evt.target.files[0];
   if (!file.type.match('image.*')) {
-    // TODO: Fix this later
-    alert('Only images are allowed');
+    alert("Oops! Looks like you didn't select an image?");
   } else {
     var reader = new FileReader();
     reader.addEventListener('load', loadOnCanvas(file), false);
@@ -56,6 +55,8 @@ function loadOnCanvas(file) {
           canvas.height / 2 - newHeight / 2, newWidth, newHeight);
         ctx.globalAlpha = 0.7;
         ctx.drawImage(overlayImage, 0, 0);
+        canvas.style.display = 'inline';
+        document.getElementById('download-btn').style.display = 'inline';
       }
     }
     var baseImg = imageLoadTracker(e.target.result, imageProcess);
@@ -63,5 +64,11 @@ function loadOnCanvas(file) {
   }
 }
 
+function downloadPic(e) {
+  var dataURL = canvas.toDataURL('image/png');
+  e.target.href = dataURL;
+}
+
 document.getElementById('select-photo').addEventListener('click', openFileDialog, false);
 document.getElementById('fileElem').addEventListener('change', loadPicture, false);
+document.getElementById('download-btn').addEventListener('click', downloadPic, false);

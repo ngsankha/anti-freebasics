@@ -12,7 +12,6 @@
     <![endif]-->
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">-->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -20,13 +19,13 @@
   <body>
     <h1>anti-internet.org</h1>
     <div class="container">
-      <p>Recently Facebook attempted to rebrand the evil its internet.org under the cover of support for the Digital India campaign. It even tricked people to show support for it by asking them to change their profile pictures. We want to ask your support to show that you are against internet.org. You want net neutrality. Change your profile picture to show your support.</p>
-      <p>To know why internet.org is evil you can read through this <a href="http://blog.savetheinternet.in/open-letter-to-mark-zuckerberg-regarding-internet-org-net-neutrality-privacy-and-security/">open letter</a>.</p>
+      <p>Recently Facebook attempted to rebrand the evil its internet.org under the cover of support for the Digital India campaign. It even tricked people to show support for it by asking them to change their profile pictures. We want to ask your support to show that you are against internet.org. You want Digital India, but you don't want internet.org. To know why internet.org is evil you can read through this <a href="http://blog.savetheinternet.in/open-letter-to-mark-zuckerberg-regarding-internet-org-net-neutrality-privacy-and-security/">open letter</a>.</p>
+      <p><em>Change your profile picture to show your support for net neutrality.</em></p>
       <div class="transform-app">
         <input type="file" id="fileElem" class="hidden">
         <button class="pure-button pure-button-primary" id="select-photo">Select profile photo</button><br>
         <canvas id="canvas" class="magic pure-img" width="800" height="800"></canvas><br>
-        <button class="pure-button download-btn">Download</button>
+        <button id="download-btn" class="pure-button download-btn">Download</button>
       </div>
     </div>
     <script src="script.js"></script>
