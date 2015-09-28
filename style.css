@@ -1,0 +1,38 @@
+body {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-left: 5em;
+  padding-right: 5em;
+  line-height: 1.7em;
+}
+
+a {
+  color: #3b8bba;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.transform-app {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.magic {
+  margin: 2em 2em 2em 2em;
+}
