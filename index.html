@@ -12,7 +12,8 @@
     <![endif]-->
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">
+    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700">
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -23,8 +24,9 @@
       <p>To know why internet.org is evil you can read through this <a href="http://blog.savetheinternet.in/open-letter-to-mark-zuckerberg-regarding-internet-org-net-neutrality-privacy-and-security/">open letter</a>.</p>
       <div class="transform-app">
         <input type="file" id="fileElem" class="hidden">
-        <button class="pure-button pure-button-primary" id="select-photo">Upload your profile photo</button><br>
-        <canvas id="canvas" class="magic" width="800" height="800"></canvas>
+        <button class="pure-button pure-button-primary" id="select-photo">Select profile photo</button><br>
+        <canvas id="canvas" class="magic pure-img" width="800" height="800"></canvas><br>
+        <button class="pure-button download-btn">Download</button>
       </div>
     </div>
     <script src="script.js"></script>

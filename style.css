@@ -1,5 +1,5 @@
 body {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -9,10 +9,10 @@ h1 {
 }
 
 .container {
-  margin-left: 5em;
-  margin-right: 5em;
-  padding-left: 5em;
-  padding-right: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15em;
+  padding-right: 15em;
   line-height: 1.7em;
 }
 
@@ -35,4 +35,22 @@ a:hover {
 
 .magic {
   margin: 2em 2em 2em 2em;
+}
+
+.download-btn {
+  background: rgb(28, 184, 65);
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 940px) {
+  .container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .magic {
+    margin: 0;
+  }
 }
