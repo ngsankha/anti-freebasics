@@ -65,7 +65,7 @@ function loadOnCanvas(file) {
 }
 
 function downloadPic(e) {
-  var dataURL = canvas.toDataURL('image/png');
+  var dataURL = document.getElementById('canvas').toDataURL('image/png');
   e.target.href = dataURL;
 }
 
