@@ -64,9 +64,9 @@ function loadOnCanvas(file) {
   }
 }
 
-function downloadPic(e) {
+function downloadPic() {
   var dataURL = document.getElementById('canvas').toDataURL('image/png');
-  e.target.href = dataURL;
+  document.getElementById('download-btn').href = dataURL;
 }
 
 document.getElementById('select-photo').addEventListener('click', openFileDialog, false);
