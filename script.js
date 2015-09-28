@@ -53,6 +53,16 @@ function loadOnCanvas(file) {
         }
         ctx.drawImage(baseImg, canvas.width / 2 - newWidth / 2,
           canvas.height / 2 - newHeight / 2, newWidth, newHeight);
+        var imageData = ctx.getImageData(0, 0, 800, 800);
+        var data = imageData.data;
+
+        for(var i = 0; i < data.length; i += 4) {
+          var brightness = 0.34 * data[i] + 0.5 * data[i + 1] + 0.16 * data[i + 2];
+          data[i] = brightness;
+          data[i + 1] = brightness;
+          data[i + 2] = brightness;
+        }
+        ctx.putImageData(imageData, 0, 0);
         ctx.globalAlpha = 0.7;
         ctx.drawImage(overlayImage, 0, 0);
         canvas.style.display = 'inline';
