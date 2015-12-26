@@ -65,7 +65,6 @@ function loadOnCanvas(file) {
         ctx.putImageData(imageData, 0, 0);
         ctx.globalAlpha = 0.7;
         ctx.drawImage(overlayImage, 0, 0);
-        canvas.style.display = 'inline';
         document.getElementById('download-btn').style.display = 'inline';
       }
     }
@@ -82,3 +81,11 @@ function downloadPic() {
 document.getElementById('select-photo').addEventListener('click', openFileDialog, false);
 document.getElementById('fileElem').addEventListener('change', loadPicture, false);
 document.getElementById('download-btn').addEventListener('click', downloadPic, false);
+
+var samplePreloader = new Image();
+samplePreloader.src = 'kirti.jpg';
+samplePreloader.addEventListener('load', function() {
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.drawImage(samplePreloader, 0, 0);
+}, false);

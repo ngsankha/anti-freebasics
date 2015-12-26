@@ -56,7 +56,7 @@ a:hover {
 
 .magic {
   margin: 2em 2em 2em 2em;
-  display: none;
+  display: inline;
 }
 
 .download-btn {
